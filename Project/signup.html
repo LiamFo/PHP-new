@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body style="background: #34302d;">
+
+    <form class="list-text login-box" style="height:580px;text-align: left;" action="resultaat3.php" method="POST">
+        Username <br><input style="margin-top:20px;" type="text" name="username" value="" required>
+        <br>
+        <br>
+        Password <br><input type="password" name="password" value="" required>
+        <br>
+        <br>
+        Confirm Password <br><input type="password" name="password" value="" required>
+        <br>
+        <br>
+        Email <br><input type="email" name="email" value="" required>
+        <br>
+        <br>
+        Date of Birth <br><input type="date" name="date" value="" required>
+        <br>
+        <br>
+        Social Security Number <br><input type="number" name="number" value="" required>
+        <br>
+        <br>
+        Credit Card Information <br><input type="number" name="number" value="" required>
+        <br>
+        <br>
+        The Three Numbers On The Back <input type="number" name="number" value="" required>
+        <br>
+        <br>
+        <input type="checkbox" id="TOS" name="TOS" value="" required>
+        <label style="font-size:10px;" for="TOS">By Checking this box I agree and understand that this information can and will be used against me in a court of law</label>
+        <br>
+        <br>
+        <input class="login-button text" type="submit" name="knop" value="Submit">
+    </form>
+
+    
+    <div style="margin-left:-633px;margin-top:-62px;">
+        <button class="text login-button" onclick="location.href='index.html'">Back</button>
+    </div>
+</body>
+</html>

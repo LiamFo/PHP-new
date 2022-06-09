@@ -1,0 +1,158 @@
+body{
+    background: linear-gradient(#34302d,#2a2724);
+    text-align:center;
+    padding: 0px;
+    margin:0px;
+    }
+
+.background{
+    background-color:#4c4744;
+    width:900px;
+    height:100vh;
+    margin:auto;
+    }
+
+.text{
+    font-family:'TF2 Build', 'Impact';
+    color:black;
+    font-weight:bold;
+    }
+
+.text-box{
+    position: relative;
+    border-radius: 10px;
+    background: linear-gradient(#f5e7de,#dabdab);
+    background-clip: padding-box;
+    padding: 10px;
+    box-shadow:0 0px 5px black;
+    width:fit-content;
+    height:fit-content;
+    }
+
+
+.class-box{
+    background-color:#242220;
+    width:520px;
+    height:74px;
+    border-radius:10px;
+    padding:10px;
+    }
+
+.weapon-box{
+    background-color:#242220;
+    width:fit-content;
+    border-radius: 10px;
+    padding:10px;
+    }
+
+
+.sub-weapon-box{
+    background: linear-gradient(#f5e7de,#dabdab);
+    border-radius:10px;
+    padding:10px;
+    }
+
+.sub-weapon-box:hover{
+    background:#f5e7de;
+    cursor: pointer;
+    }
+
+
+.sub-sub-weapon-box{
+    background: linear-gradient(#f5e7de,#dabdab);
+    border-radius:10px;
+    padding:10px;
+    }
+
+.outline { 
+    transition: all .2s ease-in-out; 
+    border: 2px solid #00000000;
+    border-radius:90px; 
+    margin-top:10px;
+    }
+        
+.outline:hover { 
+    border-color: #f5e7de;
+    padding:0xp;
+    margin: 0 auto;
+    cursor: pointer;
+    }
+
+.list-box {
+    background-color:#302e2b;
+    width:fit-content;
+    border-radius: 10px;
+    padding:10px;
+    margin:auto;
+    margin-top:20px;
+    }
+
+.list-button {
+    background: linear-gradient(#6dffb6,rgb(131, 255, 193));
+    width:fit-content;
+    border-radius: 10px;
+    padding:10px;
+    }
+
+.list-button:hover {
+    background:#bcffdd;
+    cursor: pointer;
+    }
+
+.done-button {
+    background: linear-gradient(#f5e7de,#dabdab);
+    width:fit-content;
+    border-radius: 10px;
+    padding:10px;
+    }
+
+.done-button:hover {
+    background:#f5e7de;
+    cursor: pointer;
+    }
+
+.list-text {
+    color:#f5e7de;
+    text-align:center;
+    font-family:'TF2 Build', 'Impact';
+    font-weight:bold;
+    }
+
+.list-image {
+    max-width: 100%;
+    max-height: 100%;
+    width:190px;
+    height:150px;
+    background-color:#191615;
+    border-radius:10px;
+    }
+
+.selected {
+    opacity: 30%;
+    }
+
+.login-button{
+    position: relative;
+    border-radius: 10px;
+    background: linear-gradient(#f5e7de,#dabdab);
+    background-clip: padding-box;
+    padding: 10px;
+    box-shadow:0 0px 5px black;
+    width:fit-content;
+    height:fit-content;
+}
+
+.login-button:hover{
+    background:#f5e7de;
+    cursor: pointer;
+    }
+
+
+.login-box{
+    background-color:#242220;
+    width:690px;
+    height:120px;
+    border-radius:10px;
+    padding:10px;
+    margin:auto;
+    }
