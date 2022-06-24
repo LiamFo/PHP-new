@@ -9,14 +9,15 @@
 </head>
 <body style="background: #34302d;">
 
-    <form class="list-text login-box" action="resultaat3.php" method="POST">
+<p1 class="list-text">Login<br></p1>
+
+    <form class="list-text login-box" action="index.html" method="POST">
         Username <input style="margin-top:20px;" type="text" name="username" value="" required>
         Password <input type="password" name="password" value="" required>
         <input class="login-button text" type="submit" name="knop" value="Submit">
     </form>
     
     <div style="margin-left:15px;margin-top:-60px;">
-        <button class="text login-button" onclick="location.href='index.html'">Back</button>
+        <button class="text login-button" onclick="location.href='index.php'">Back</button>
     </div>
 </body>
-</html>

@@ -1,4 +1,5 @@
 <body>
+    
         <form action="inlogphp.php" method="POST">
             Username <input type="text" name="username" value="" required>
             Wachtwoord <input type="password" name="password" value="" required>
@@ -10,7 +11,3 @@
         <p><a href="inlogphp.php?loguit">log out</a></p>
         <p><a href="adminpage.php">admin</a></p>
         </body>
-
-        <?php
-            print_r($_SESSION);
-        ?>
