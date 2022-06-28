@@ -104,14 +104,16 @@ body{
     text-align:center;
     font-family:'TF2 Build', 'Impact';
     font-weight:bold;
-    }
+    font-size:20px;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+  }
 
 .list-image {
     max-width: 100%;
     max-height: 100%;
     width:190px;
     height:150px;
-    background-color:#191615;
+    background-color:#19161578;
     border-radius:10px;
     }
 

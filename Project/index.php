@@ -114,6 +114,16 @@ GenerateItems($dph);
     runclass();
     runWeapon();
     ?>
+
+<div id="weapon-container"></div>
+  <script>
+    for(i = 0; i < weapons.length; i++) {
+      var weapon = weapons[i];
+      var element = document.createElement("p");
+      element.innerHTML = "class: " + weapon.class; // set in php
+      document.getElementById("weapon-container").addChild(element);
+    }
+</script>
 </div>
 </body>
 </html>
