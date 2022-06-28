@@ -221,7 +221,7 @@ for($i = 0;$i < 9; $i++){
             echo "<img src='".$row["image"]."'style='width:150px;height:113px;margin-top:20px;' >";
             echo "</div>";
 
-            echo "<div style='margin-top:-110px;text-align:center;'>";
+            echo "<div style='margin-top:-110px;text-align:center; margin-right:-130px;'>";
             echo $row[$weapontype];
 
             echo "<div style='margin-top:50px;text-align:center;'>";
