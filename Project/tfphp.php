@@ -5,10 +5,14 @@ session_start();
 
 if(!isset($_SESSION["classArray"])){
 $_SESSION["classArray"] = ["scout","soldier","pyro","demoman","heavy","engineer","medic","sniper","spy"];
-$_SESSION["WeaponArray"] = ["primary","secondary","melee"];
+}
+
+if(!isset($_SESSION["WeaponArray"])){
+    $_SESSION["WeaponArray"] = ["primname","secname","melname"];
 }
 
 print_r ($_SESSION["classArray"]);
+print_r ($_SESSION["WeaponArray"]);
 
 function runclass(){
     if($_SESSION["classArray"][0] == "scout"){
@@ -144,28 +148,85 @@ if($id == 8){
 
 }
 
-function FilterWeapon(){
+///////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////(line-to-split-class-and-weapon-functions)////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////
 
+function runWeapon(){
+    if($_SESSION["WeaponArray"][0] == "primname"){
+        echo "<script> document.getElementById('class10').classList.remove('selected'); </script>";
+    }else{
+        echo "<script> document.getElementById('class10').classList.add('selected'); </script>";
+    }
+
+    if($_SESSION["WeaponArray"][1] == "secname"){
+        echo "<script> document.getElementById('class11').classList.remove('selected'); </script>";
+    }else{
+        echo "<script> document.getElementById('class11').classList.add('selected'); </script>";
+    }
+
+    if($_SESSION["WeaponArray"][2] == "melname"){
+        echo "<script> document.getElementById('class12').classList.remove('selected'); </script>";
+    }else{
+        echo "<script> document.getElementById('class12').classList.add('selected'); </script>";
+    }
 }
 
-function GenerateItems($con){  /////////////////////////////
+function FilterWeapon($id){
+    if($id == 10){
+        if($_SESSION["WeaponArray"][0] == "primname"){
+            $_SESSION["WeaponArray"][0] = "";
+        }else{
+            $_SESSION["WeaponArray"][0] = "primname";
+        }
+    }
 
-for($i = 0;$i < 9; $i++){
-    $where = $_SESSION["classArray"][$i];
+    if($id == 11){
+        if($_SESSION["WeaponArray"][1] == "secname"){
+            $_SESSION["WeaponArray"][1] = "";
+        }else{
+            $_SESSION["WeaponArray"][1] = "secname";
+        }
+    }
 
-    if($where != ""){
-        $prim =  'SELECT primname FROM primaryweapons WHERE tf2class_classname = "'.$where.'"ORDER BY rand() LIMIT 1';
-
-        foreach ($con->query($prim) as $row) {
-            echo $row["primname"];
+    if($id == 12){
+        if($_SESSION["WeaponArray"][2] == "melname"){
+            $_SESSION["WeaponArray"][2] = "";
+        }else{
+            $_SESSION["WeaponArray"][2] = "melname";
         }
     }
 }
 
+function GenerateItems($con){  /////////////////////////////
+    echo "<br>";
+    echo "<div class='list-text'>";
+for($i = 0;$i < 9; $i++){
+    $where = $_SESSION["classArray"][$i];
+    for($j = 0; $j < 3; $j++){
+       
+    $weapontype = $_SESSION["WeaponArray"][$j];
+    if($weapontype == "primname"){
+        $weapons = "primary";
+    }else if($weapontype == "secname"){
+        $weapons = "secondary";
+    }else if($weapontype == "melname"){
+        $weapons = "melee";
+    }
+
+    if($where != "" && $weapontype != ""){
+        $prim =  'SELECT '. $weapontype.', image, tf2class_classname FROM '.$weapons.'weapons WHERE tf2class_classname = "'.$where.'"ORDER BY rand() LIMIT 1';
+        foreach ($con->query($prim) as $row) {
+            echo $row[$weapontype];
+            echo " ".$row["tf2class_classname"];
+            echo "<br>";
+        }
+    }
+    }
+}
+echo "</div>";
 }
 
-function CreateList(){ ////////////////////////////////
-    print_r($classarray);
-    echo $classarray;
-}
+
+
 ?>

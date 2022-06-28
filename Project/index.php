@@ -39,17 +39,11 @@ GenerateItems($dph);
         <img onClick="location.href='index.php?8'" class="outline" id="class9" src="https://wiki.teamfortress.com/w/images/9/95/Spy_emblem_RED.png" style="width:50px;height:50px;">
     </div>
 
-    <div style="margin-left:640px;margin-top:-70px;"> <!--login/sign up page buttons-->
-        <button class="text login-button" onclick="location.href='inlog.php'">Login</button>
-    </div>
-    <div style="margin-left:805px;margin-top:-39px;">
-        <button class="text login-button" onclick="location.href='signup.php'">Sign Up</button>
-    </div>
 
     <div class="weapon-box" style="margin:auto;margin-top:55px;"> <!--weapon type box-->
-        <img onClick="SelectedWeapon(this)" id="class10" src="https://wiki.teamfortress.com/w/images/3/34/Killicon_scattergun.png" class="sub-weapon-box" style="width:70px;height:20px;">
-        <img onClick="SelectedWeapon(this)" id="class11" src="https://wiki.teamfortress.com/w/images/1/1a/Killicon_pistol.png" class="sub-weapon-box" style="width:30px;height:20px;">
-        <img onClick="SelectedWeapon(this)" id="class12" src="https://wiki.teamfortress.com/w/images/d/de/Killicon_bat.png" class="sub-weapon-box" style="width:65px;height:20px;">
+        <img onClick="location.href='index.php?10'" id="class10" src="https://wiki.teamfortress.com/w/images/3/34/Killicon_scattergun.png" class="sub-weapon-box" style="width:70px;height:20px;">
+        <img onClick="location.href='index.php?11'" id="class11" src="https://wiki.teamfortress.com/w/images/1/1a/Killicon_pistol.png" class="sub-weapon-box" style="width:30px;height:20px;">
+        <img onClick="location.href='index.php?12'" id="class12" src="https://wiki.teamfortress.com/w/images/d/de/Killicon_bat.png" class="sub-weapon-box" style="width:65px;height:20px;">
         <p class="text sub-sub-weapon-box" style="width:fit-content;text-align:center;">Primary  Secondary  Melee</p>
     </div>
         <div onclick="location.href='index.php?Gen'" class="list-button" style="margin:auto;margin-top:-95px;margin-left:600px;">
@@ -103,7 +97,22 @@ GenerateItems($dph);
         FilterClass(8);
         }
 
+/////////////////////////////////////////
+
+    if(isset($_GET["10"])){
+        FilterWeapon(10);
+        }
+    
+    if(isset($_GET["11"])){
+        FilterWeapon(11);
+        }
+    
+    if(isset($_GET["12"])){
+        FilterWeapon(12);
+        }
+
     runclass();
+    runWeapon();
     ?>
 </div>
 </body>

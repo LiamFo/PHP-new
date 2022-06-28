@@ -99,18 +99,6 @@ body{
     cursor: pointer;
     }
 
-.done-button {
-    background: linear-gradient(#f5e7de,#dabdab);
-    width:fit-content;
-    border-radius: 10px;
-    padding:10px;
-    }
-
-.done-button:hover {
-    background:#f5e7de;
-    cursor: pointer;
-    }
-
 .list-text {
     color:#f5e7de;
     text-align:center;
@@ -129,30 +117,4 @@ body{
 
 .selected {
     opacity: 30%;
-    }
-
-.login-button{
-    position: relative;
-    border-radius: 10px;
-    background: linear-gradient(#f5e7de,#dabdab);
-    background-clip: padding-box;
-    padding: 10px;
-    box-shadow:0 0px 5px black;
-    width:fit-content;
-    height:fit-content;
-}
-
-.login-button:hover{
-    background:#f5e7de;
-    cursor: pointer;
-    }
-
-
-.login-box{
-    background-color:#242220;
-    width:690px;
-    height:120px;
-    border-radius:10px;
-    padding:10px;
-    margin:auto;
     }
