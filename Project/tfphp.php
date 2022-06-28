@@ -198,47 +198,6 @@ function FilterWeapon($id){
     }
 }
 
-// function GenerateItems($con){  /////////////////////////////
-//     echo "<br>";
-// for($i = 0;$i < 9; $i++){
-//     $where = $_SESSION["classArray"][$i];
-//     for($j = 0; $j < 3; $j++){
-       
-//     $weapontype = $_SESSION["WeaponArray"][$j];
-//     if($weapontype == "primname"){
-//         $weapons = "primary";
-//     }else if($weapontype == "secname"){
-//         $weapons = "secondary";
-//     }else if($weapontype == "melname"){
-//         $weapons = "melee";
-//     }
-
-//     if($where != "" && $weapontype != ""){
-//         $prim =  'SELECT '. $weapontype.', image, tf2class_classname FROM '.$weapons.'weapons WHERE tf2class_classname = "'.$where.'"ORDER BY rand() LIMIT 1';
-//         foreach ($con->query($prim) as $row) {
-//             echo "<div class='list-text list-box' style='width:600px;'>";
-//             echo "<div class='list-image'>";
-//             echo "<img src='".$row["image"]."'style='width:150px;height:113px;' >";
-//             echo "</div>";
-
-//             echo "<div style='margin-top:-110px;text-align:center;'>";
-//             echo $row[$weapontype];
-
-//             echo "<div style='margin-top:50px;text-align:center;'>";
-//             echo "<br>".$row["tf2class_classname"];
-//             echo "</div>"."</div>"."</div>"."<br>";
-//         }
-//     }
-//     }
-// }
-// }
-
-
-//HERES THE CODE ROOT VVVVV
-//HERES THE CODE ROOT VVVVV
-//HERES THE CODE ROOT VVVVV
-
-
 function GenerateItems($con){
     echo "<br>";
 for($i = 0;$i < 9; $i++){
@@ -256,18 +215,21 @@ for($i = 0;$i < 9; $i++){
 
     if($where != "" && $weapontype != ""){
         $prim =  'SELECT '. $weapontype.', image, tf2class_classname FROM '.$weapons.'weapons WHERE tf2class_classname = "'.$where.'"ORDER BY rand() LIMIT 1';
-        $result = array();
         foreach ($con->query($prim) as $row) {
-            $weapon = array();
-            $weapon["class"] = $row["tf2class_classname"];
-            // add to array
-            $result[] = $weapon;
+            echo "<div class='list-text list-box' style='width:600px;'>";
+            echo "<div class='list-image'>";
+            echo "<img src='".$row["image"]."'style='width:150px;height:113px;margin-top:20px;' >";
+            echo "</div>";
+
+            echo "<div style='margin-top:-110px;text-align:center;'>";
+            echo $row[$weapontype];
+
+            echo "<div style='margin-top:50px;text-align:center;'>";
+            echo "<br>".$row["tf2class_classname"];
+            echo "</div>"."</div>"."</div>"."<br>";
+               }
+            }
         }
-        echo "<script>";
-        echo "const weapons = " . json_encode($result) . ";";
-        echo "</script>";
     }
- }
-}
 }
 ?>
