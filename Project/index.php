@@ -114,9 +114,15 @@ GenerateItems($dph);
     runclass();
     runWeapon();
     ?>
+<!-- 
+HERES THE CODE ROOT VVVVV
+HERES THE CODE ROOT VVVVV
+HERES THE CODE ROOT VVVVV
+-->
 
 <div id="weapon-container"></div>
   <script>
+    console.log(weapons);
     for(i = 0; i < weapons.length; i++) {
       var weapon = weapons[i];
       var element = document.createElement("p");
@@ -124,6 +130,7 @@ GenerateItems($dph);
       document.getElementById("weapon-container").addChild(element);
     }
 </script>
+
 </div>
 </body>
 </html>
