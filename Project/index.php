@@ -23,7 +23,7 @@ GenerateItems($dph);
 </head>
 <body>
 
-<div class="background">
+<div class="background" id="background">
 
     <div class="class-box" style="margin:auto;margin-top:20px;">
         <img onClick="location.href='index.php?0'" class="outline" id="class1" src="https://wiki.teamfortress.com/w/images/0/0a/Scout_emblem_RED.png" style="width:50px;height:50px;">
@@ -49,16 +49,6 @@ GenerateItems($dph);
         <div onclick="location.href='index.php?Gen'" class="list-button" style="margin:auto;margin-top:-95px;margin-left:600px;">
             <p class="text">Generate List</p>
         </div>
-
-    <!-- <div class="list-box" style="width:700px;margin-top:60px;">
-        <p class="list-text" style="margin-top:20px;">Weapon Name</p>
-            <div style="text-align:left;margin-top:-50px;">
-                <img class="list-image" src="https://wiki.teamfortress.com/w/images/7/74/Backpack_Scattergun.png">
-            </div>
-        <div class="done-button" style="margin:auto;margin-top:-65px;margin-left:320px;">
-            <p class="text">Done</p>
-        </div>
-    </div> -->
 
     <?php 
     if(isset($_GET["0"])){
@@ -114,6 +104,39 @@ GenerateItems($dph);
     runclass();
     runWeapon();
     ?>
+
+<div class="list-box" style="opacity:0%;" id="weapon-container"></div>
+  <script>
+    var weaponContainer = document.getElementById("weapon-container");
+    for(i = 0; i < weapons.length; i++) {
+      var weapon = weapons[i];
+
+      var weaponimage = document.createElement("img");
+      weaponimage.src = weapon.image;
+      weaponimage.classList.add("list-image");
+
+      var element = document.createElement("span");
+      element.innerHTML = weapon.name;
+      element.classList.add("list-name");
+
+      var weaponclass = document.createElement("span");
+      weaponclass.innerHTML = weapon.class;
+      weaponclass.classList.add("weapon-entry-line2");
+      weaponclass.classList.add("list-class");
+
+      var weaponEntry = document.createElement("div");
+      weaponEntry.classList.add("weapon-entry");
+
+      weaponEntry.appendChild(weaponimage);
+      weaponEntry.appendChild(element);
+      weaponContainer.appendChild(weaponEntry);
+      weaponContainer.appendChild(weaponclass);
+    }
+
+    document.getElementById('weapon-container').style.opacity = 1;
+
+    document.getElementById('background').style.height = "fit-content";
+</script>
 </div>
 </body>
 </html>

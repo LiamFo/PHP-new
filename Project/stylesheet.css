@@ -1,15 +1,20 @@
 body{
     background: linear-gradient(#34302d,#2a2724);
     text-align:center;
-    padding: 0px;
-    margin:0px;
+    max-width: 930px;
+    margin:auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     }
+
+html{
+    height:100%;
+}
 
 .background{
     background-color:#4c4744;
     width:900px;
     height:100vh;
-    margin:auto;
     }
 
 .text{
@@ -80,11 +85,12 @@ body{
 
 .list-box {
     background-color:#302e2b;
-    width:fit-content;
     border-radius: 10px;
     padding:10px;
     margin:auto;
-    margin-top:20px;
+    margin-top:95px;
+    width:600px;
+    opacity: 100%;
     }
 
 .list-button {
@@ -99,24 +105,46 @@ body{
     cursor: pointer;
     }
 
-.list-text {
+.list-name {  /*weapon names*/
     color:#f5e7de;
-    text-align:center;
     font-family:'TF2 Build', 'Impact';
     font-weight:bold;
     font-size:20px;
+    margin-left:20px;
     text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
   }
 
+  .list-class { /*class names*/
+    color:#f5e7de;
+    font-family:'TF2 Build', 'Impact';
+    font-weight:bold;
+    font-size:20px;
+    text-align:center;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+    position: absolute;
+    margin-top: -75px;
+  }
+
 .list-image {
-    max-width: 100%;
-    max-height: 100%;
-    width:190px;
-    height:150px;
     background-color:#19161578;
     border-radius:10px;
+    margin-top:15px;
     }
 
 .selected {
     opacity: 30%;
+    }
+
+.weapon-entry {
+    display: flex;
+    align-items: center;
+    }
+
+.weapon-entry img {
+    width: 150px;
+    height: 113px;
+    }
+
+.weapon-entry-line2 {
+    margin-left: 200px;
     }
